@@ -46,21 +46,21 @@ const serviceController = {
     }
   },
 
-  delete: async (req,res) => {
+  delete: async (req, res) => {
     try {
       const id = req.params.id;
       const service = await ServiceModel.findById(id);
 
-      const deleteService  = await ServiceModel.findByIdAndDelete(id)
+      const deleteService = await ServiceModel.findByIdAndDelete(id);
 
-      res.status(200).json({deleteService , msg: "Serviço deletado" })
+      res.status(200).json({ deleteService, msg: "Serviço deletado" });
     } catch (error) {
-      res.status(404).json({ msg: "Serviço não encontrado"});
-      console.log(error)
+      res.status(404).json({ msg: "Serviço não encontrado" });
+      console.log(error);
     }
   },
 
-  update: async (req,res) => {
+  update: async (req, res) => {
     try {
       const id = req.params.id;
       const service = {
@@ -70,14 +70,13 @@ const serviceController = {
         image: req.body.image, // URL ou caminho da imagem
       };
 
-      const updateService  = await ServiceModel.findByIdAndUpdate(id, service)
-      res.status(200).json({service , msg: "Serviço atualizado" })
-
+      const updateService = await ServiceModel.findByIdAndUpdate(id, service);
+      res.status(200).json({ service, msg: "Serviço atualizado" });
     } catch (error) {
-      res.status(404).json({ msg: "Serviço não encontrado"});
-      console.log(error)
+      res.status(404).json({ msg: "Serviço não encontrado" });
+      console.log(error);
     }
-  }
+  },
 };
 
 // Exporta o controller para ser usado nas rotas
