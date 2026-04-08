@@ -1,0 +1,55 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7a00;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+/* Título */
+#navbar h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Lista */
+#navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Links */
+#navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover */
+#navbar a:hover {
+  opacity: 0.85;
+}
+
+/* Botão */
+#navbar .btn {
+  background-color: #fff;
+  color: #ff7a00;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Hover botão */
+#navbar .btn:hover {
+  background-color: #ffe0c2;
+}
+
+/* Link ativo */
+#navbar a.active {
+  border-bottom: 2px solid #fff;
+}

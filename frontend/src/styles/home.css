@@ -1,0 +1,73 @@
+/* Container principal */
+.home {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título */
+.home h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grid de festas */
+.parties-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card da festa */
+.party {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.party:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem */
+.party img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Título da festa */
+.party h3 {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+/* Botão */
+.btn-secondary {
+  display: block;
+  text-align: center;
+  margin: 0 1rem 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+}
+
+/* Mensagem de vazio */
+.parties-container p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+}
