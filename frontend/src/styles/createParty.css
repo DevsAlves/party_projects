@@ -1,0 +1,184 @@
+/* =========================
+   RESET E BASE
+========================= */
+form {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Lato", sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ff7a00, #ff9a3c);
+  color: #fff;
+}
+
+/* Título */
+.form-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Texto */
+.form-header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+/* Labels */
+form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+/* Inputs e Textarea */
+form input,
+form textarea {
+  margin-top: 0.4rem;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+/* Focus dos campos */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.2);
+}
+
+/* Textarea específico */
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+.btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e96d00;
+}
+
+/* =========================
+   SEÇÃO DE SERVIÇOS
+========================= */
+
+/* Container dos serviços */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Card de serviço */
+.service {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.2s;
+  background-color: #fafafa;
+}
+
+/* Hover do card */
+.service:hover {
+  border-color: #ff7a00;
+  transform: translateY(-3px);
+}
+
+/* Imagem do serviço */
+.service img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* Nome do serviço */
+.service-name {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* Preço do serviço */
+.service-price {
+  color: #ff7a00;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+/* Container do checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Checkbox */
+.checkbox-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Texto do checkbox */
+.checkbox-container p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
