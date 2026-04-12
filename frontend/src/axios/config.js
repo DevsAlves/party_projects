@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const partyFetch = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: "https://party-projects.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
