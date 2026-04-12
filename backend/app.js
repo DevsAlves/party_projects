@@ -1,21 +1,27 @@
-const express = require("express"); // Cria servidores HTTP
-const cors = require("cors"); //Requisições entre o back e o front (origens diferentes)
-const app = express(); // Inicializa o APP
+const express = require("express");
+const cors = require("cors");
+const app = express();
 
 // Configurações
-app.use(cors()); // Fazer requisições em outros domínios
-app.use(express.json()); //Utilizar o JSON
+app.use(cors());
+app.use(express.json());
 
 // Conexão com o banco
 const conn = require("./db/conn");
-
 conn();
+
+// Rota base (IMPORTANTE)
+app.get("/", (req, res) => {
+  res.json({ message: "API online" });
+});
 
 // Routes
 const routes = require("./routes/router");
-
 app.use("/api", routes);
 
-app.listen(3000, function () {
-  console.log("Servidor funcionando !!"); //Inicialização do servidor
+// Porta dinâmica (IMPORTANTE)
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function () {
+  console.log(`Servidor funcionando na porta ${PORT}`);
 });
